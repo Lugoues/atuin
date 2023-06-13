@@ -195,7 +195,7 @@ jobs:
 
     - name: Publish archives and packages
       uses: softprops/action-gh-release@v1
-      if: steps.is-release.outputs.IS_RELEASE
+      # if: steps.is-release.outputs.IS_RELEASE
       with:
         files: |
           ${{ steps.package.outputs.PKG_PATH }}
