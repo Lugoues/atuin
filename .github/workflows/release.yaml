@@ -144,11 +144,6 @@ jobs:
         # README, LICENSE and CHANGELOG files
         cp "README.md" "LICENSE" "$ARCHIVE_DIR"
 
-        # # Shell completions
-        # for sh in 'bash' 'fish' 'zsh'; do
-        #   "${{ steps.strip.outputs.BIN_PATH }}" gen-completions -s $sh -o "${ARCHIVE_DIR}/completions"
-        # done
-
         # base compressed package
         pushd "${PKG_STAGING}/" >/dev/null
         case ${{ matrix.job.target }} in
